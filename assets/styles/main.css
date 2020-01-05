@@ -63,10 +63,9 @@ body, html {
 }
 
 
-
 .slide-left-right {
 	text-decoration: none;
-	color: red;
+	color: black;
 	position: relative;
 	/* prepare for sliding from right to left */
 }
@@ -88,12 +87,24 @@ body, html {
 }
 
 /* Change the width and background on hover, aka sliding out */
-.slide-left-right:hover:after {
+/* .slide-left-right:hover:after {
 	width: 100%;
-	background: red;
+	background: black;
+} */
+
+.color {
+	color: red;
 }
 
+#contact-font {
+	font-family: 'Times New Roman', Times, serif;
+	color: black;
+}
 
+#info-font {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: red;
+}
 
 #hero > h2{
 	position: absolute;
