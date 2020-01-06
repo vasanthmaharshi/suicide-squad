@@ -128,11 +128,13 @@ a{
 		display:none;
 	}
 }
+
 .navbar {
 	position: sticky ;
 	top: 0;
 	z-index: 100;
 	text-align: left;
+	background-image: linear-gradient(#bb843b, #eeece900);
 }
 .navbar-logo {
 	margin-top: 10px;
@@ -143,3 +145,62 @@ a{
 		width: 40px;
 	}
 }
+/* 4. Main-page buttons */
+.btn_ctnr{
+    position: fixed;
+    top: 25px;
+    right: 100px;
+    display: inline-flex;
+    z-index: 110;
+}
+
+.btn{
+    margin: 0 10px;
+	font-size: 1.2em;
+	transition: all 0.3s ease 0s;
+}
+
+.btn > a{
+	padding: 3px 0;
+    text-decoration:none;
+    color: #2629cf;
+}
+
+.btn > a:hover{
+    color: #1c1e94;
+}
+
+@media screen and (max-width: 600px) {
+    .btn {
+        display: none;
+    }
+}
+.slide-left-right {
+	text-decoration: none;
+	color: red;
+	position: relative;
+	/* prepare for sliding from right to left */
+}
+
+/* add a empty string after the elment with class .slide-right-left  */
+.slide-left-right:after {
+	content: '';
+	display: block;
+	height: 3px;
+	width: 0;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+	-webkit-transition: width .5s ease, background-color .5s ease;
+	-moz-transition: width .5s ease, background-color .5s ease;
+	/* position the content to the right bottom corner of the parent element to make it slide from right to left on hover */
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+/* Change the width and background on hover, aka sliding out */
+.slide-left-right:hover:after {
+	width: 100%;
+	background: red;
+}
+
