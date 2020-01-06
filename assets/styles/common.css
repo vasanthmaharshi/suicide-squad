@@ -100,17 +100,18 @@
     right: 20px;
     width: 40px;
     height: 40px;
-    display: block;
+    display: none;
     cursor: pointer;
     transition: opacity 0.2s linear;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .open {
 		top: 15px;
 		right: 15px;
 		height: 30px;
-		width: 30px;
+        width: 30px;
+        display: block;
     }
 }
 
@@ -263,7 +264,7 @@
     color: #1c1e94;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .btn {
         display: none;
     }
