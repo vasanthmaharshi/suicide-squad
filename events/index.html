@@ -1,107 +1,762 @@
-<!DOCTYPE html>
 <html>
-    <head lang="en-US">
-        <title>Events | Srijan 2019</title>
-        <meta name="viewport" content="initial-scale=1,width=screen-width">
-        <meta charset="UTF-8">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/brand_logo.png" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway|Lato" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./assets/css/eventPage.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">      
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-		<!-- jQuery Modal -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
-		<style>
-			#preloader {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100vh;
-				background: black no-repeat;
-				background-image: url(assets/loader.svg);
-				background-position: center center;
-				background-size: 40%;
-				z-index: 99999;
-			}
-		</style>
-
-	</head>
-    <body onload="temp()" style="background-image: url('assets/img/wood.svg');background-repeat: no-repeat;background-size: cover;height: 100vh;">
-		<!-- preloader-->
-		<div id="preloader"></div>
-
-		<!-- navigation logo -->
-		<nav class="navbar">
-			<a href="/">
-				<img src="assets/brand_logo.png" class="navbar-logo" />
-			</a>
-		</nav>
-
-		<!-- Main-page button -->
-		<div class="btn_ctnr">
-			<div class="btn">
-				<a class="slide-left-right" href="/events">EVENTS</a>
-			</div>
-			<div class="btn">
-				<a class="slide-left-right" href="/campus-ambassador/">CA PROGRAM</a>
-			</div>
-			<div class="btn">
-				<a class="slide-left-right" href="/register">REGISTER</a>
-			</div>
-			<div class="btn">
-				<a class="slide-left-right" href="/sponsors">SPONSORS</a>
-			</div>
-			<div class="btn">
-				<a class="slide-left-right" href="/heads">OUR TEAM</a>
-			</div>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="temp()">
+      <!-- preloader -->
+      <div id="preloader"></div>
+  
+      <!-- navigation logo -->
+      <nav class="navbar">
+        <a href="/">
+          <img src="assets/brand_logo.png" class="navbar-logo" />
+        </a>
+      </nav>
+  
+      <!-- Main-page button -->￼
+  
+      <div class="btn_ctnr">
+        <div class="btn">
+          <a class="slide-left-right" href="events">EVENTS</a>
         </div>
-        <div style="padding: 15% 20%;font-size: 500%;">
-            <p>
-                Coming Soon...
-            </p>
+        <div class="btn">
+          <a class="slide-left-right" href="campus-ambassador/">CA PROGRAM</a>
         </div>
-        
+        <div class="btn">
+          <a class="slide-left-right" href="register">REGISTER</a>
+        </div>
+        <div class="btn">
+          <a class="slide-left-right" href="sponsors">SPONSORS</a>
+        </div>
+        <div class="btn">
+          <a class="slide-left-right" href="heads">OUR TEAM</a>
+        </div>
+      </div>
 
-		<!-- Preloader function -->
-		<script>
-			document.body.style.overflow = 'hidden';
-			var delay = 4000, loaded = false, timedOut = false;
-			var preloader = document.getElementById('preloader');
-			setTimeout (function(){
-				timedOut = true;
-				hidePreloader();
-			}, delay);
-			function temp() {
-				loaded = true;
-				hidePreloader();
-			}
-			function hidePreloader() {
-				if(loaded && timedOut){
-					preloader.style.display = 'none';
-					document.body.style.overflow = 'auto';
-				}
-			}
-		</script>
 
-		<script type="text/javascript">
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-              acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                  panel.style.display = "none";
-                } else {
-                  panel.style.display = "block";
-                }
-              });
-            }
-        </script>
+    <div class="heading">
+      Formal Events
+    </div> 
+      <div class="event_container">
+        <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+          <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+          <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+          <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+          <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+        </div>
+      </div>
+       <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="event_container">
+        <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+          <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+          <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+          <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+          <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+        </div>
+      </div>
+       <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="event_container">
+        <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+          <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+          <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+          <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+          <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+        </div>
+      </div>
+       <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="event_container">
+        <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+          <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+          <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+          <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+          <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+        </div>
+      </div>
+       <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="event_container">
+        <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+          <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+          <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+          <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+          <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+        </div>
+      </div>
+       <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <div class="heading">
+      Informal Events
+    </div> 
+    <div class="event_container">
+      <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+        <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+      </div>
+      <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+        <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+      </div>
+      <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+        <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+      </div>
+      <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+        <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+      </div>
+    </div>
+     <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="event_container">
+      <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+        <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+      </div>
+      <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+        <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+      </div>
+      <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+        <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+      </div>
+      <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+        <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+      </div>
+    </div>
+     <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="event_container">
+        <div class="event_card" style="background-image: url('assets/img/avalanche.jpg')">
+          <button data-toggle="modal" data-target="#avalanche"><h3 class="title">Avalanche</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/bizquiz.jpg')">
+          <button data-toggle="modal" data-target="#bizquiz"><h3 class="title">Biz Quiz</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/campaign.jpg')">
+          <button data-toggle="modal" data-target="#campaign"><h3 class="title">Campaign</h3></button>
+        </div>
+        <div class="event_card" style="background-image: url('assets/img/facepainting.jpg')">
+          <button data-toggle="modal" data-target="#facepainting"><h3 class="title">Face Painting</h3></button>
+        </div>
+      </div>
+       <div class="modal fade" id="avalanche" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="avalancheLongTitle">Avalanche</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="bizquiz" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bizquizLongTitle">Biz Quiz</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="campaign" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="campaignLongTitle">Campaign</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="facepainting" tabindex="-1" role="dialog" aria-labelledby="avalancheLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="facepaintingLongTitle">Face Painting</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.body.style.overflow = 'hidden';
+        var delay = 4000, loaded = false, timedOut = false;
+        var preloader = document.getElementById('preloader');
+        setTimeout (function(){
+          timedOut = true;
+          hidePreloader();
+        }, delay);
+        function temp() {
+          loaded = true;
+          hidePreloader();
+        }
+        function hidePreloader() {
+          if(loaded && timedOut){
+            preloader.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }
+        }
+      </script>      
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="assets/scripts/jquery-3.3.1.min.js"></script>
+      <script src="assets/scripts/main.js"></script>
     </body>
-</html>
-
+ </html>

@@ -5,7 +5,7 @@
     width: 100%;
     height: 100vh;
     background: #000000 no-repeat;
-    background-image: url(../images/loader.svg);
+    background-image: url(../images/preloader.gif);
     background-position: center center;
     background-size: 40%;
     z-index: 99999;
@@ -20,7 +20,7 @@ body, html {
 
 .parallax {
     position: relative;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,6 +42,7 @@ body, html {
 	text-align: center;
 	font-family: 'Raleway', Verdana, 'Geneva', Tahoma, sans-serif;
 	font-size: 20px;
+	background-color: #ffffff;
 }
 
 @media screen and (max-width: 600px) {
@@ -140,20 +141,29 @@ body, html {
 #hero > h2:hover > #nhtxt{
 	display: none;
 }
-
+#parallax-2{
+	background-image: linear-gradient( rgba(78,12,48,1) 0%, rgba(78,12,48,1) 27%, rgba(60,14,95,1) 55%, rgba(40,16,148,1) 82%, rgba(0,18,255,1) 100%);
+}
 #parallax-2 .caption {
-	align-items: flex-end;
-	height: 80%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
 }
 
 #parallax-2 .border {
 	color: rgba(255, 255, 255, 0.8);
-	background-image: linear-gradient(to right top, rgba(123, 78, 7, 0.8), rgba(172, 132, 38, 0.7), rgba(190, 152, 62, 0.75), rgba(201, 167, 104, 0.6), rgba(244, 219, 172, 0.6));
+	background-color: #ebc9da14;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 	padding: 20px 5% 7.5% 5%;
 }
-
+#parallax-3{
+	background-color: blue;
+	background-image: linear-gradient(blue, greenyellow);
+}
 #parallax-3 .caption {
 	position: absolute;
 	top: 0;
@@ -168,6 +178,10 @@ body, html {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
+#parallax-4{
+	background-color: greenyellow;
+	background-image: linear-gradient(greenyellow,blue);
+}
 #parallax-4 .border {
 	color: rgba(10, 10, 10, 0.8);
 }
@@ -234,6 +248,11 @@ body, html {
 	}
 }
 
+#parallax-5{
+	background-color: blue;
+	background-image: linear-gradient(blue, #02025b);
+}
+
 #parallax-5 .border {
 	text-align: left;
 }
@@ -267,6 +286,10 @@ body, html {
 
 .quick-links-container > .cols > div > a:hover {
 	color: rgba(255, 255, 255, 1);
+}
+#parallax-6{
+	background-color: greenyellow;
+	background-image: linear-gradient(#02025b,black);
 }
 #parallax-6 .caption {
 	position: absolute;
@@ -397,4 +420,37 @@ body, html {
 	text-align: center;
 	text-transform: uppercase;
 	display: inline-block;
+}
+filter {
+	color-interpolation-filters: sRGB
+  }
+  
+#glass-text{
+position: relative;
+font-family: cursive;
+font-weight: bold;
+font-size: 8rem;
+margin-top: 30vh;
+text-align: center;
+text-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px;
+filter:url(#in-and-out)
+}
+
+#glass-text:before,
+#glass-text:after {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+content: attr(data-text)
+}
+
+#glass-text:before {
+color: #036;
+text-shadow: -1px -1px 1px, 0 -1px 1px, 1px -1px 1px, 1px 0 1px, 1px 1px 1px, 0 1px 1px, -1px 1px 1px, -1px 0 1px
+}
+
+#glass-text:after {
+color: rgba(40, 80, 120, .9);
+filter:url(#lightA3)
 }

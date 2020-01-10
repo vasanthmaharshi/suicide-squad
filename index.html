@@ -77,13 +77,12 @@
 			<span class="cls"></span>
 		</div>
 
-		<div class="parallax" id="hero" data-image-src="url('assets/images/1.png')" style="background-image: url('assets/images/1.png'); background-position: center 150px;">
-			<h2>
-				<span id="nhtxt">Prizes worth &#8377;7,50,000 to be won!</span>
-				<span id="htxt">All prizes to be digitally distributed on the spot.</span>
-			</h2>
+		<div class="parallax" id="hero" data-image-src="url('assets/images/1.png')" style="background-image: url('assets/images/scene.png'); background-color: bisque;">
+			<h1 id="glass-text" data-text="Srijan 2020">
+				Srijan 2020
+			</h1>
 		</div>
-		<div class="parallax" id="parallax-2" data-image-src="url('assets/images/2.png')">
+		<div class="parallax" id="parallax-2" data-image-src="url('assets/images/2.png')" style="background-color: #4e0c30;">
 			<div class="caption">
 			  	<span class="border">
 					<h2>ABOUT US</h2>
@@ -237,7 +236,64 @@
 							</div>
 			</div>
 		</div>
-
+		<!-- FILTERS -->
+		<svg>
+			<filter id=lightA3>
+			  <feGaussianBlur in='SourceAlpha' stdDeviation='3' result='B' />
+			  <feSpecularLighting in='B' specularExponent='128' result='S'>
+				<feDistantLight azimuth='225' elevation='70' />
+			  </feSpecularLighting>
+			  <feComposite in='S' in2='SourceAlpha' operator='in' result='L' />
+			  <feComposite in='SourceGraphic' in2='L' operator='arithmetic' k2='1' k3='1' />
+			</filter>
+			<filter id=in-and-out>
+			  <feGaussianBlur stdDeviation='4' in='SourceAlpha' />
+			  <feOffset result='fO' dy='5' dx='5' />
+			  <feComposite in2='fO' operator='xor' in='SourceGraphic' />
+			</filter>
+		  </svg>		  
+		<svg>
+			<filter id="distortion">
+			<feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+			<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+			</filter>
+			
+			<filter id="textFilter">
+					
+			<!-- dark edge -->
+			<feMorphology operator="dilate" radius="4" in="SourceAlpha" result="dark_edge_01" />
+			<feOffset dx="5" dy="5" in="dark_edge_01" result="dark_edge_03"/>
+			<feFlood flood-color="rgba(0,0,0,.5)" result="dark_edge_04" />
+			<feComposite in="dark_edge_04" in2="dark_edge_03" operator="in" result="dark_edge" />     
+					
+			<!-- light edge -->
+			<feMorphology operator="dilate" radius="4" in="SourceAlpha" result="light_edge_01" />
+			<feOffset dx="-2" dy="-2" in="light_edge_01" result="light_edge_03"/>
+			<feFlood flood-color="rgba(255,255,255,.5)" result="light_edge_04" />
+			<feComposite in="light_edge_04" in2="light_edge_03" operator="in" result="light_edge" />
+					
+			<!-- edges together -->
+			<feMerge result="edges">
+				<feMergeNode in="dark_edge" />
+				<feMergeNode in="light_edge" />
+			</feMerge>
+			<feComposite in="edges" in2="SourceGraphic" operator="out" result="edges_complete" />
+					
+			<!-- bevel -->
+			<feGaussianBlur stdDeviation="5" result="bevel_blur" />
+			<feSpecularLighting result="bevel_lighting" in="bevel_blur" specularConstant="2.4" specularExponent="13" lighting-color="rgba(60,60,60,.4)">
+				<feDistantLight azimuth="25" elevation="40" />
+			</feSpecularLighting>
+			<feComposite in="bevel_lighting" in2="SourceGraphic" operator="in" result="bevel_complete" />
+		
+			<!-- everything in place -->
+			<feMerge result="complete">
+						<feMergeNode in="edges_complete" />
+						<feMergeNode in="bevel_complete" />
+			</feMerge>
+		
+			</filter>
+		</svg>
 		<script>
 			document.body.style.overflow = 'hidden';
 			var delay = 4000, loaded = false, timedOut = false;
@@ -262,6 +318,6 @@
 		<script src="assets/scripts/three.min.js"></script>
 		<script src="assets/scripts/main.js"></script>
 		<!--<script src="assets/scripts/smoke.js"></script> -->
-		<script src="assets/scripts/parallax.js"></script>
+		<!-- <script src="assets/scripts/parallax.js"></script> -->
 	</body>
 </html>
