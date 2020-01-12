@@ -178,15 +178,30 @@
 
 .sub-menu li:first-child { margin-top: 180px; }
 
-.sub-menu li:nth-child(1) { -webkit-transition-delay: 0.05s; }
+.sub-menu li:nth-child(1) { 
+    -webkit-transition-delay: 0.05s; 
+    transition-delay: 0.05s; 
+}
 
-.sub-menu li:nth-child(2) { -webkit-transition-delay: 0.10s; }
+.sub-menu li:nth-child(2) { 
+    -webkit-transition-delay: 0.10s; 
+    transition-delay: 0.10s; 
+}
 
-.sub-menu li:nth-child(3) { -webkit-transition-delay: 0.15s; }
+.sub-menu li:nth-child(3) { 
+    -webkit-transition-delay: 0.15s; 
+    transition-delay: 0.15s; 
+}
 
-.sub-menu li:nth-child(4) { -webkit-transition-delay: 0.20s; }
+.sub-menu li:nth-child(4) { 
+    -webkit-transition-delay: 0.20s; 
+    transition-delay: 0.20s; 
+}
 
-.sub-menu li:nth-child(5) { -webkit-transition-delay: 0.25s; }
+.sub-menu li:nth-child(5) { 
+    -webkit-transition-delay: 0.25s; 
+    transition-delay: 0.25s; 
+}
 
 .sub-menu li a {
     color: #fff;

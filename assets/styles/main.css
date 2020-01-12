@@ -141,8 +141,15 @@ body, html {
 #hero > h2:hover > #nhtxt{
 	display: none;
 }
+#main-logo{
+    height: 50vh;
+    position: relative;
+    width: 50vw;
+    margin: 15% 25%;
+}
+
 #parallax-2{
-	background-image: linear-gradient( rgba(78,12,48,1) 0%, rgba(78,12,48,1) 27%, rgba(60,14,95,1) 55%, rgba(40,16,148,1) 82%, rgba(0,18,255,1) 100%);
+	background-image: linear-gradient(to top,rgb(255, 244, 84) 0%, rgb(204, 177, 74) 25%, rgb(165, 126, 66) 51%, rgb(126, 75, 58) 71%, rgb(78, 12, 48) 100%);
 }
 #parallax-2 .caption {
 	position: absolute;
@@ -161,8 +168,8 @@ body, html {
 	padding: 20px 5% 7.5% 5%;
 }
 #parallax-3{
-	background-color: blue;
-	background-image: linear-gradient(blue, greenyellow);
+	background-color: #fff454;
+	background-image: url("/assets/images/beach.png")
 }
 #parallax-3 .caption {
 	position: absolute;
@@ -179,9 +186,10 @@ body, html {
 }
 
 #parallax-4{
-	background-color: greenyellow;
-	background-image: linear-gradient(greenyellow,blue);
+	background-color: #856098;
+	background-image: linear-gradient(#856098,blue);
 }
+
 #parallax-4 .border {
 	color: rgba(10, 10, 10, 0.8);
 }
