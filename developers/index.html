@@ -1,88 +1,173 @@
 <!DOCTYPE html>
 <html>
-<head lang="en-US">
-	<title>Developers | Srijan 2019</title>
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/brand_logo.png" />
-	<meta name="viewport" content="initial-scale=1,width=screen-width">
-	<meta charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css?family=Raleway|Lato" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./assets/css/headPageStyle.css">
-</head>
-<body>
-	<nav class="navbar">
-        <a href="/">
-            <img src="./assets/img/brand_logo.png" class="navbar-logo" />
-        </a>
-    </nav>
+    <head lang="en-US">
+        <title>Events | Srijan 2019</title>
+        <meta name="viewport" content="initial-scale=1,width=screen-width">
+        <meta charset="UTF-8">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/brand_logo.png" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Lato" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./assets/css/developerPageStyle.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
-	<h1>Technical Core Team</h1>
-	<div class="flex-container">
-		<div class="card">
-			<img src="./assets/img/Manan_Jhaveri.jpg" alt="Manan Jhaveri" style="width:100%;">
-			<div class="contain">
-				<h3>Manan Jhaveri</h3>
-			</div>
-		</div>
-		<div class="card">
-			<img src="https://scontent.fpat1-1.fna.fbcdn.net/v/t1.0-9/48962103_2226629690715423_501503406800633856_n.jpg?_nc_cat=101&_nc_ht=scontent.fpat1-1.fna&oh=144d8b2b07870c4ad14ce633f9046d61&oe=5D13C3FC" alt="Mehul Mistry" style="width:100%;">
-			<div class="contain">
-				<h3>Mehul Mistry</h3>
-			</div>
-		</div>
-	</div>
+		<!-- jQuery Modal -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
-	<h1>Developers</h1>
-	<div class="flex-container">
-		<div class="card">
-			<img src="https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/41067992_253869328603883_2606779002433568768_n.jpg?_nc_cat=107&_nc_ht=scontent.fccu2-1.fna&oh=471fe0f06b61e38ae1c7719d6583181e&oe=5D256A59" alt="Mayank Kumar" style="width:100%;">
-			<div class="contain">
-				<h3>Mayank Kumar</h3>
-				<a href="https://github.com/Mk-ism/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-			</div>
-		</div>
-		<div class="card">
-			<img src="https://scontent.fccu2-1.fna.fbcdn.net/v/t1.0-9/27332595_2004293653228640_619841963193814493_n.jpg?_nc_cat=110&_nc_ht=scontent.fccu2-1.fna&oh=3cb2fb25a28fb548db785f4b8bf4a34e&oe=5D11DE10" alt="Yash Soni" style="width:100%;">
-			<div class="contain">
-				<h3>Yash Soni</h3>
-				<a href="https://github.com/yash17ys4/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-			</div>
-		</div>
-		<div class="card">
-			<img src="./assets/img/Kumar_Kshitij.jpg" alt="Kumar Kshitij" style="width:100%;">
-			<div class="contain">
-				<h3>Kumar Kshitij</h3>
-				<a href="https://github.com/PsYcO-kk/" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-			</div>
-		</div>
-	</div>
-	<h1>Designers</h1>
-	<div class="flex-container">
-		<div class="card">
-			<img src="assets/img/paras.JPG" alt="Paras Mehndiratta" style="width:100%;">
-			<div class="contain">
-				<h3>Paras Mehndiratta</h3>
-			</div>
-		</div>
-		<div class="card">
-			<img src="assets/img/varnika.jpg" alt="Varnika Kumari" style="width:100%;">
-			<div class="contain">
-				<h3>Varnika Kumari</h3>
-			</div>
-		</div>
-		<div class="card">
-			<img src="./assets/img/madhur.jpg" alt="Madhur Mohan Tripathi" style="width:100%;">
-			<div class="contain">
-				<h3>Madhur Mohan Tripathi</h3>
-			</div>
-		</div>
-		<div class="card">
-			<img src="./assets/img/snigdh.jpg" alt="Snigdh Katiyar" style="width:100%;">
-			<div class="contain">
-				<h3>Snigdh Katiyar</h3>
-			</div>
-		</div>
-	</div>
+		<style>
+			#preloader {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				background: black no-repeat;
+				background-image: url(assets/loader.svg);
+				background-position: center center;
+				background-size: 40%;
+				z-index: 99999;
+			}
+		</style>
 
-</body>
+	</head>
+    <body onload="temp()" style="background-image: url('assets/img/back.png');background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+		<!-- preloader-->
+		<div id="preloader"></div>
+
+		<!-- navigation logo -->
+		<nav class="navbar">
+			<a href="/">
+				<img src="assets/brand_logo.png" class="navbar-logo" />
+			</a>
+		</nav>
+
+		<!-- Main-page button -->
+		<div class="btn_ctnr">
+			<div class="btn">
+				<a class="slide-left-right" href="/events">EVENTS</a>
+			</div>
+			<div class="btn">
+				<a class="slide-left-right" href="/campus-ambassador/">CA PROGRAM</a>
+			</div>
+			<div class="btn">
+				<a class="slide-left-right" href="/register">REGISTER</a>
+			</div>
+			<div class="btn">
+				<a class="slide-left-right" href="/sponsors">SPONSORS</a>
+			</div>
+			<div class="btn">
+				<a class="slide-left-right" href="/heads">OUR TEAM</a>
+			</div>
+        </div>
+        <!-- Nav bar -->
+		<div class="open">
+			<span class="cls"></span>
+			<span>
+				<ul class="sub-menu ">
+					<li> <a class="slide-left-right" href="/register">Register</a> </li>
+					<li> <a class="slide-left-right" href="/events">Events</a> </li>
+					<li> <a class="slide-left-right" href="/campus-ambassador">Campus Ambassador</a> </li>
+					<li> <a class="slide-left-right" href="/sponsors">Sponsors</a> </li>
+					<li> <a class="slide-left-right" href="/heads">Heads</a> </li>
+					<li> <a class="slide-left-right" href="/developers">Developers</a> </li>
+				</ul>
+			</span>
+			<span class="cls"></span>
+		</div>
+        
+        <div id="position">
+            <h2>
+                Technical Core Team
+            </h2>
+        </div>
+        <ul class="flex-container">
+            <li class="cards">
+                <img src="assets/img/karunesh.jpg">
+                <div class="contain">
+                    <h2>Karunesh Talwar</h2>
+                    <p>1234567890</p>
+                </div>
+            </li>   
+            <li class="cards">
+                <img src="assets/img/karunesh.jpg">
+                <div class="contain">
+                    <h2>Karunesh Talwar</h2>
+                    <p>1234567890</p>
+                </div>
+            </li>   
+        </ul>
+        <div id="position">
+            <h2>
+                Developers
+            </h2>
+        </div>
+        <ul class="flex-container">
+            <li class="cards">
+                <img src="assets/img/karunesh.jpg">
+                <div class="contain">
+                    <h2>Karunesh Talwar</h2>
+                    <p>1234567890</p>
+                </div>
+            </li>
+            <li class="cards">
+                <img src="assets/img/karunesh.jpg">
+                <div class="contain">
+                    <h2>Karunesh Talwar</h2>
+                    <p>1234567890</p>
+                </div>
+            </li>   
+            <li class="cards">
+                <img src="assets/img/karunesh.jpg">
+                <div class="contain">
+                    <h2>Karunesh Talwar</h2>
+                    <p>1234567890</p>
+                </div>
+            </li>   
+            <li class="cards">
+                <img src="assets/img/karunesh.jpg">
+                <div class="contain">
+                    <h2>Karunesh Talwar</h2>
+                    <p>1234567890</p>
+                </div>
+            </li>   
+        </ul>
+		<!-- Preloader function -->
+		<script>
+			document.body.style.overflow = 'hidden';
+			var delay = 4000, loaded = false, timedOut = false;
+			var preloader = document.getElementById('preloader');
+			setTimeout (function(){
+				timedOut = true;
+				hidePreloader();
+			}, delay);
+			function temp() {
+				loaded = true;
+				hidePreloader();
+			}
+			function hidePreloader() {
+				if(loaded && timedOut){
+					preloader.style.display = 'none';
+					document.body.style.overflow = 'auto';
+				}
+			}
+		</script>
+        <script src="/assets/scripts/main.js"></script>
+
+		<script type="text/javascript">
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+        </script>
+    </body>
 </html>
+

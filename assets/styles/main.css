@@ -4,7 +4,7 @@
 	left: 0;
     width: 100%;
     height: 100vh;
-    background: #000000 no-repeat;
+    background: #161519 no-repeat;
     background-image: url(../images/preloader.gif);
     background-position: center center;
     background-size: 40%;
@@ -58,11 +58,9 @@ body, html {
         background-attachment: scroll;
     }
 } */
-
-#hero, #parallax-3 {
+#parallax-3 {
 	position: relative;
 }
-
 
 .slide-left-right {
 	text-decoration: none;
@@ -106,6 +104,12 @@ body, html {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: red;
 }
+#hero{
+	position: relative;
+	background-image: url('/assets/images/scene.png'); 
+	background-color: bisque;
+	/* background-position: bottom; */
+}
 
 #hero > h2{
 	position: absolute;
@@ -142,14 +146,23 @@ body, html {
 	display: none;
 }
 #main-logo{
-    height: 50vh;
-    position: relative;
-    width: 50vw;
-    margin: 15% 25%;
+    height: 60vh;
+	position: relative;
+	width: 50vw;
+	margin-top: 10vh;
+	margin-left: 25vw;
+}
+@media screen and (max-width: 791px) {
+	#main-logo{
+		height: 50vh;
+		width: 65vw;
+		margin-top: 20vh;
+		margin-left: 20vw;
+	}
 }
 
 #parallax-2{
-	background-image: linear-gradient(to top,rgb(255, 244, 84) 0%, rgb(204, 177, 74) 25%, rgb(165, 126, 66) 51%, rgb(126, 75, 58) 71%, rgb(78, 12, 48) 100%);
+	background-image: linear-gradient(to top, rgba(253,191,127,1) 0%, rgba(157,93,84,1) 45%, rgba(124,59,69,1) 69%, rgba(78,12,48,1) 100%);
 }
 #parallax-2 .caption {
 	position: absolute;
@@ -168,7 +181,7 @@ body, html {
 	padding: 20px 5% 7.5% 5%;
 }
 #parallax-3{
-	background-color: #fff454;
+	background-color: #fdbf7f;
 	background-image: url("/assets/images/beach.png")
 }
 #parallax-3 .caption {
@@ -185,12 +198,18 @@ body, html {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 791px) {
+	#parallax-3{
+		background-position-x: -150px;
+	}
+}
 #parallax-4{
 	background-color: #856098;
 	background-image: linear-gradient(#856098,blue);
 }
 
 #parallax-4 .border {
+	background-color: rgba(250, 250, 250, 0.596);
 	color: rgba(10, 10, 10, 0.8);
 }
 
@@ -263,12 +282,15 @@ body, html {
 
 #parallax-5 .border {
 	text-align: left;
+	background-color: #ffffff41;
 }
 
 #parallax-5 h2 {
-	padding-left: 15%;
+	text-align: center;
 }
-
+#parallax-5 #afterMovie{
+	width: 100%;
+}
 .quick-links-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -296,8 +318,8 @@ body, html {
 	color: rgba(255, 255, 255, 1);
 }
 #parallax-6{
-	background-color: greenyellow;
-	background-image: linear-gradient(#02025b,black);
+	background-color: #02025b;
+	background-image: url('/assets/images/scene-6.png')
 }
 #parallax-6 .caption {
 	position: absolute;
@@ -309,6 +331,7 @@ body, html {
 }
 
 #parallax-6 .border {
+	background-color: rgba(187, 187, 187, 0.226);
 	color: rgba(255, 255, 255, 0.8);
 }
 
@@ -429,36 +452,20 @@ body, html {
 	text-transform: uppercase;
 	display: inline-block;
 }
+@media screen and (max-width: 600px) {
+	#countdown{
+		width: 300px;
+	}
+	#countdown .labels li{
+		width: 50px;
+	}
+	#countdown #tiles > span{
+		width: 42px;
+		font: bold 28px 'Droid Sans', Arial, sans-serif;
+	}
+}
+
 filter {
 	color-interpolation-filters: sRGB
   }
   
-#glass-text{
-position: relative;
-font-family: cursive;
-font-weight: bold;
-font-size: 8rem;
-margin-top: 30vh;
-text-align: center;
-text-shadow: 0 0 .7px, 0 0 1.1px, 0 0 1.1px;
-filter:url(#in-and-out)
-}
-
-#glass-text:before,
-#glass-text:after {
-position: absolute;
-left: 0;
-right: 0;
-top: 0;
-content: attr(data-text)
-}
-
-#glass-text:before {
-color: #036;
-text-shadow: -1px -1px 1px, 0 -1px 1px, 1px -1px 1px, 1px 0 1px, 1px 1px 1px, 0 1px 1px, -1px 1px 1px, -1px 0 1px
-}
-
-#glass-text:after {
-color: rgba(40, 80, 120, .9);
-filter:url(#lightA3)
-}
